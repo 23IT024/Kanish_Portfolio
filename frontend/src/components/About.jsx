@@ -67,10 +67,6 @@ export default function About() {
               className="about-avatar-img"
             />
 
-            <div className="about-avatar">
-              K
-            </div>
-
             <div className="about-tags">
               <span className="atag atag-purple">
                 B.Tech IT

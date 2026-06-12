@@ -247,7 +247,9 @@
 
   .about-avatar-col {
     align-items: center;
+    text-align: center;
   }
+  .about-avatar-img { margin: 0 auto; display: block; }
 }
 
 /* Mobile */
