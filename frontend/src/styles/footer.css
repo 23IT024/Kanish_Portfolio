@@ -1,0 +1,29 @@
+.footer {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 100%);
+  border-top: 2px solid #e0e0e0;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
+  font-weight: 700;
+  color: #333333;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer a {
+  color: #0066ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer a:hover {
+  color: #0099cc;
+  text-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 20px;
+    font-size: 0.95rem;
+  }
+}

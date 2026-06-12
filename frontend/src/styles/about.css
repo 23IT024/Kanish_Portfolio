@@ -1,0 +1,284 @@
+.about-section {
+  padding: 5rem 7rem;
+  background: #fff;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 500;
+  color: #2c2c2a;
+  white-space: nowrap;
+}
+
+.title-line {
+  flex: 1;
+  height: 1px;
+  background: #e5e5e3;
+}
+
+.about-card {
+  border: 0.5px solid #e5e5e3;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.card-top-bar {
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #7f77dd,
+    #1d9e75,
+    #d85a30,
+    #378add,
+    #d4537e
+  );
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2.5rem;
+  padding: 2rem 2.5rem;
+  align-items: start;
+}
+
+.about-avatar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.about-avatar {
+  width: 170px;
+  height: 170px;
+  border-radius: 24px;
+  background: linear-gradient(
+    135deg,
+    #eeedfe,
+    #e1f5ee
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+  font-weight: 600;
+  color: #7f77dd;
+  border: 2px solid #af a9ec;
+}
+
+.about-avatar-img {
+  width: 170px;
+  height: 170px;
+  border-radius: 24px;
+  object-fit: cover;
+  border: 2px solid #afa9ec;
+}
+
+.about-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.atag {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 999px;
+  text-align: center;
+}
+
+.atag-purple {
+  background: #eeedfe;
+  color: #534ab7;
+  border: 0.5px solid #afa9ec;
+}
+
+.atag-teal {
+  background: #e1f5ee;
+  color: #0f6e56;
+  border: 0.5px solid #5dcaa5;
+}
+
+.atag-amber {
+  background: #faeeda;
+  color: #854f0b;
+  border: 0.5px solid #fac775;
+}
+
+.about-text-col h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c2c2a;
+  margin-bottom: 14px;
+}
+
+.about-text-col p {
+  font-size: 14px;
+  color: #5f5e5a;
+  line-height: 1.9;
+  margin-bottom: 12px;
+}
+
+.about-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.about-tech-stack span {
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 0.5px solid #e5e5e3;
+  background: #fafafa;
+  font-size: 12px;
+  color: #5f5e5a;
+  font-weight: 500;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 22px;
+}
+
+.stat-box {
+  border: 0.5px solid #e5e5e3;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  background: #fafafa;
+  transition: 0.25s;
+}
+
+.stat-box:hover {
+  transform: translateY(-3px);
+}
+
+.stat-box h4 {
+  margin: 0;
+  font-size: 26px;
+  color: #7f77dd;
+  font-weight: 600;
+}
+
+.stat-box span {
+  font-size: 12px;
+  color: #5f5e5a;
+}
+
+.highlights-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.highlight-card {
+  border: 0.5px solid #e5e5e3;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  background: #fafafa;
+  transition: 0.25s;
+}
+
+.hl-icon {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.hl-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #2c2c2a;
+}
+
+.hl-purple .hl-icon {
+  color: #7f77dd;
+}
+
+.hl-purple:hover {
+  background: #eeedfe40;
+  border-color: #afa9ec;
+}
+
+.hl-teal .hl-icon {
+  color: #1d9e75;
+}
+
+.hl-teal:hover {
+  background: #e1f5ee40;
+  border-color: #5dcaa5;
+}
+
+.hl-amber .hl-icon {
+  color: #ba7517;
+}
+
+.hl-amber:hover {
+  background: #faeeda40;
+  border-color: #fac775;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .about-section {
+    padding: 4rem 2rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-avatar-col {
+    align-items: center;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .stats-row,
+  .highlights-row {
+    grid-template-columns: 1fr;
+  }
+
+  .about-tags {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-avatar {
+    width: 140px;
+    height: 140px;
+    font-size: 56px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .about-grid {
+    padding: 1.5rem;
+  }
+}

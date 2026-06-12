@@ -1,0 +1,482 @@
+/* ===========================
+   ROOT LOADER
+=========================== */
+
+.loader {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #ffffff;
+  font-family: Inter, sans-serif;
+}
+
+/* ===========================
+   GRID BACKGROUND
+=========================== */
+
+.grid-bg {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(127, 119, 221, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(127, 119, 221, 0.06) 1px,
+      transparent 1px
+    );
+
+  background-size: 60px 60px;
+
+  animation: gridMove 15s linear infinite;
+}
+
+@keyframes gridMove {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(60px);
+  }
+}
+
+/* ===========================
+   FLOATING BLOBS
+=========================== */
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.35;
+}
+
+.blob-1 {
+  width: 450px;
+  height: 450px;
+  background: #61dafb;
+
+  left: -120px;
+  top: -120px;
+
+  animation: blobOne 18s ease-in-out infinite;
+}
+
+.blob-2 {
+  width: 400px;
+  height: 400px;
+  background: #7f77dd;
+
+  right: -100px;
+  top: 20%;
+
+  animation: blobTwo 16s ease-in-out infinite;
+}
+
+.blob-3 {
+  width: 420px;
+  height: 420px;
+  background: #1d9e75;
+
+  left: 35%;
+  bottom: -200px;
+
+  animation: blobThree 20s ease-in-out infinite;
+}
+
+@keyframes blobOne {
+  50% {
+    transform: translate(80px, 50px) scale(1.15);
+  }
+}
+
+@keyframes blobTwo {
+  50% {
+    transform: translate(-100px, 60px) scale(1.1);
+  }
+}
+
+@keyframes blobThree {
+  50% {
+    transform: translate(0px, -80px) scale(1.2);
+  }
+}
+
+/* ===========================
+   ORBITS
+=========================== */
+
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.orbit-1 {
+  width: 320px;
+  height: 320px;
+
+  border: 1px solid rgba(127, 119, 221, 0.15);
+
+  animation: spin 18s linear infinite;
+}
+
+.orbit-2 {
+  width: 520px;
+  height: 520px;
+
+  border: 1px solid rgba(29, 158, 117, 0.12);
+
+  animation: spinReverse 25s linear infinite;
+}
+
+.orbit-3 {
+  width: 720px;
+  height: 720px;
+
+  border: 1px solid rgba(55, 138, 221, 0.08);
+
+  animation: spin 35s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* ===========================
+   FLOATING ICONS
+=========================== */
+
+.tech-universe {
+  position: absolute;
+  inset: 0;
+}
+
+.floating-icon {
+  position: absolute;
+
+  font-size: 44px;
+
+  opacity: 0.9;
+
+  filter:
+    drop-shadow(0 0 12px currentColor)
+    drop-shadow(0 0 30px currentColor);
+
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ===========================
+   CENTER CONTENT
+=========================== */
+
+.loader-center {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* ===========================
+   NAME
+=========================== */
+
+.loader-name {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.loader-letter {
+  font-size: clamp(3rem, 9vw, 7rem);
+  font-weight: 800;
+
+  background: linear-gradient(
+    135deg,
+    #7f77dd,
+    #378add,
+    #1d9e75,
+    #ff9900
+  );
+
+  background-size: 300% 300%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientFlow 5s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+/* ===========================
+   SUBTITLE
+=========================== */
+
+.loader-subtitle {
+  color: #666;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  margin-bottom: 24px;
+}
+
+/* ===========================
+   PROGRESS
+=========================== */
+
+.loader-progress {
+  width: min(420px, 85vw);
+  height: 8px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: rgba(127, 119, 221, 0.1);
+
+  margin-bottom: 18px;
+}
+
+.loader-progress-bar {
+  width: 100%;
+  height: 100%;
+
+  transform-origin: left;
+
+  border-radius: inherit;
+
+  background: linear-gradient(
+    90deg,
+    #7f77dd,
+    #378add,
+    #1d9e75,
+    #ff9900
+  );
+
+  box-shadow:
+    0 0 20px rgba(127, 119, 221, 0.3),
+    0 0 40px rgba(55, 138, 221, 0.2);
+}
+
+/* ===========================
+   STATUS
+=========================== */
+
+.loader-status {
+  color: #7f77dd;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ===========================
+   PARTICLES
+=========================== */
+
+.particles {
+  position: absolute;
+  inset: 0;
+}
+
+.particle {
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #7f77dd;
+
+  box-shadow:
+    0 0 10px #7f77dd,
+    0 0 20px #7f77dd;
+}
+
+/* ===========================
+   CODE WATERMARK
+=========================== */
+
+.code-watermark {
+  position: absolute;
+
+  bottom: 60px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: clamp(1rem, 2vw, 2rem);
+
+  font-family: "Fira Code", monospace;
+
+  color: rgba(0, 0, 0, 0.05);
+
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* ===========================
+   TABLETS
+=========================== */
+
+@media (max-width: 1024px) {
+  .orbit-3 {
+    width: 600px;
+    height: 600px;
+  }
+
+  .orbit-2 {
+    width: 450px;
+    height: 450px;
+  }
+
+  .floating-icon {
+    font-size: 36px;
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
+  .floating-icon {
+    font-size: 28px;
+    opacity: 0.75;
+  }
+
+  .orbit-3 {
+    width: 450px;
+    height: 450px;
+  }
+
+  .orbit-2 {
+    width: 320px;
+    height: 320px;
+  }
+
+  .orbit-1 {
+    width: 220px;
+    height: 220px;
+  }
+
+  .loader-subtitle {
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 0 20px;
+  }
+
+  .loader-status {
+    font-size: 12px;
+  }
+
+  .blob-1,
+  .blob-2,
+  .blob-3 {
+    filter: blur(80px);
+  }
+
+  .code-watermark {
+    bottom: 30px;
+  }
+}
+
+/* ===========================
+   SMALL PHONES
+=========================== */
+
+@media (max-width: 480px) {
+  .loader-name {
+    gap: 3px;
+  }
+
+  .floating-icon {
+    font-size: 22px;
+  }
+
+  .loader-progress {
+    width: 80vw;
+    height: 6px;
+  }
+
+  .loader-subtitle {
+    max-width: 280px;
+    line-height: 1.5;
+  }
+
+  .orbit-3 {
+    width: 350px;
+    height: 350px;
+  }
+
+  .orbit-2 {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orbit-1 {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* ===========================
+   LARGE DESKTOPS
+=========================== */
+
+@media (min-width: 1600px) {
+  .floating-icon {
+    font-size: 54px;
+  }
+
+  .orbit-1 {
+    width: 420px;
+    height: 420px;
+  }
+
+  .orbit-2 {
+    width: 650px;
+    height: 650px;
+  }
+
+  .orbit-3 {
+    width: 900px;
+    height: 900px;
+  }
+}
